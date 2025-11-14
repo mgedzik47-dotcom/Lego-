@@ -1,1 +1,1 @@
-# Lego-skibibsi jamal
+# Lego-magazin narkomanov
