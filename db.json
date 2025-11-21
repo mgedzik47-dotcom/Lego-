@@ -1,7 +1,13 @@
 {
   "users": [
     {
+      "id":3,
+      "name": "Chineese new year fair",
+      "description":"Collection Chineese set",
+      "photo_url":"https://playzone.com.ua/image/cache/data/lego/ninjago/2020/03/80105-box-1000x750.jpg",
+      "price": "155$"
 
+    },{
       "id": 1,
       "name":"Chinese New Year fair",
       "description":"Collection Chinese set",
@@ -13,7 +19,6 @@
       "description": "Collection Chinese set",
       "photo_url":"https://playzone.com.ua/image/cache/data/lego/ninjago/2020/03/80105-box-1000x750.jpg",
       "price": "155$"
-
     }
   ]
 }
