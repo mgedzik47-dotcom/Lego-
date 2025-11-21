@@ -1,24 +1,31 @@
-let order = document.getElementById('form');
-let orders = [];
-order.addEventListener('submit' ,function(event){
-event.preventDefault();
-let order = {
-    name :event.target['name'].value,
-    id :event.target['id'].value,
-    description:event.target['description'].value,
-    price :event.target['price'].value,
-    img :event.target['img'].value,
-}
-event.target.reset();
-orders.push(order);
-drawOrder(order);
-console.log(JSON.stringify (order));
-})
-function createDownloadLink(order){
-    let text = JSON.stringify(order);
-    let download  = document.createElement('a');
-    download.setAttribute('href' , 'data:text/plain;charset=utf-8,'+ encodeURIComponent(text));
-    download.setAttribute('download','order.json');
-    download.innerHTML = 'link'
-    return download;
-}
+let form = document.getElementById('form');
+let linkContainer = document.getElementById('link-container');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let order = {
+        id: document.getElementById('id').value,
+        name: document.getElementById('name').value,
+        price: document.getElementById('price').value,
+        description: document.getElementById('description').value,
+        img: document.getElementById('img').value
+    };
+
+    console.log(order);
+
+    form.reset();
+
+    // создаём Blob и URL
+    let blob = new Blob([JSON.stringify(order, null, 2)], {type: 'application/json'});
+    let url = URL.createObjectURL(blob);
+
+    // создаём параграф с ссылкой
+    let p = document.createElement('p');
+    let a = document.createElement('a');
+    a.href = url;
+    a.download = 'order-' + new Date().getTime() + '.json';
+    a.innerText = 'Скачать JSON';
+    p.appendChild(a);
+    linkContainer.appendChild(p);
+});
