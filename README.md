@@ -7,3 +7,4 @@ vania - goluboy
 timur - rozovi
 max - zeleni
 
+misha i iarik toge golubie
