@@ -1,0 +1,12 @@
+#form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
