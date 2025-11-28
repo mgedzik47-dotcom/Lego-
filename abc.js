@@ -1,4 +1,4 @@
-fetch("db.json")
+fetch("https://raw.githubusercontent.com/mgedzik47-dotcom/Lego-/main/db.json")
     .then(res => res.json())
     .then(data => {
         const container = document.getElementById("form");
@@ -9,8 +9,7 @@ fetch("db.json")
 
             card.innerHTML = `
                 <img src="${item.photo_url}" alt="${item.name}" width="200">
-              
-                <h3>${item.id}</h3>
+                <h3>${item.name}</h3>
                 <p>${item.description}</p>
                 <p>${item.price}</p>
             `;
