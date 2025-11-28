@@ -1,0 +1,57 @@
+
+#form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+.id{
+border-radius: 10px;
+width: 150px;
+height: 30px;
+}
+.name{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+.price{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+.description{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+.img{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+}
+.generateorder{
+    width: 130px;
+    height: 30px;
+    background-color:red;
+    border-radius:10px;
+    border-color:gray ;
+    color: white;
+    border: 2px solid white;
+}
+body{           
+    background: linear-gradient(red, orange, red);
+
+}
+.generateorder:hover{
+    transition-duration: 1.6s;
+background-color: orange;
+
+}
+.result{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
